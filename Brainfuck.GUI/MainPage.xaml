@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="Brainfuck.GUI.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Brainfuck.GUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid KeyDown="UIElement_OnKeyDown">
+        <TextBlock HorizontalAlignment="Left" Margin="10,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Brainfuck"/><Run Text=" (F5 to compile)"/><Run Text=":"/><LineBreak/><Run/><Run Text=":"/></TextBlock>
+        <RichEditBox Name="BrainfuckInputRichTextBox" Margin="10,82,10,0" Height="180" VerticalAlignment="Top" HorizontalAlignment="Stretch" TextChanged="BrainfuckInputRichTextBox_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,275,0,0" Text="Output:" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <RichEditBox Name="OutputRichTextBox" Margin="10,300,10,0" Height="180" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <ListBox Name="MemoryDumpListBox" HorizontalAlignment="Right" Margin="0,500,10,10" Width="219" VerticalAlignment="Stretch"/>
+        <TextBlock HorizontalAlignment="Left" Margin="16,507,0,0" Text="Input:" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <TextBox Name="InputTextBox" Margin="72,500,695,0" Text="" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+
+    </Grid>
+</Page>
